@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb Toggler</title>
+    <style>
+        .bulb-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .bulb {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #f4d03f;
+
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .bulb.on {
+            background-color: #f1c40f;
+        
+        }
+
+        .bulb.off {
+            background-color: #0b0c0c;
+          
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bulb-container">
+        <div class="bulb" id="bulb"></div>
+    </div>
+    <script>
+        const bulb = document.getElementById('bulb');
+
+        bulb.addEventListener('click', function () {
+            this.classList.toggle('on');
+            this.classList.toggle('off');
+        });
+
+    </script>
+</body>
+
+</html>
